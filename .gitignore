@@ -1,0 +1,20 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environments
+venv/
+env/
+*.env
+
+# Django settings
+*.log
+*.sqlite3
+db.sqlite3
+
+# Media files (you can adjust this based on your project needs)
+media/
+
+# Other common files
+*.DS_Store

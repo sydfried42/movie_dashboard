@@ -1,6 +1,7 @@
 <!-- templates/movies/movie_list.html -->
-
 <h1>Movie List</h1>
+
+<!-- Table displaying movies -->
 <table>
     <thead>
         <tr>
@@ -23,3 +24,18 @@
         {% endfor %}
     </tbody>
 </table>
+
+<!-- Chart.js -->
+<h2>IMDb Ratings Over Time</h2>
+<canvas id="ratingChart" width="400" height="200"></canvas>
+
+<!-- Include Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Pass movie data into a global JavaScript variable -->
+<script>
+    window.movieData = JSON.parse('{{ movie_data|escapejs }}');  // Properly parsed JSON data
+</script>
+
+<!-- Include your external JavaScript file -->
+<script src="{% static 'movie_chart.js' %}"></script>

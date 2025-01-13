@@ -20,5 +20,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # Default Django admin route
-    path('movies/', include('movies.urls')),  # Include the movies app URLs
+    path('movies/', include('movies.urls')),
 ]

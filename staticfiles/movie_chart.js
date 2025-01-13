@@ -8,14 +8,14 @@ function initMovieChart(movieData) {
     // Create a Chart.js line chart
     const ctx = document.getElementById('ratingChart').getContext('2d');
     const ratingChart = new Chart(ctx, {
-        type: 'line',  // Line chart type
+        type: 'line',
         data: {
             labels: releaseYears,  // X-axis (years)
             datasets: [{
                 label: 'IMDb Rating',
                 data: imdbRatings,  // Y-axis (ratings)
-                borderColor: 'rgba(75, 192, 192, 1)',  // Line color
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',  // Fill color
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
                 borderWidth: 1
             }]
         },
@@ -34,7 +34,7 @@ function initMovieChart(movieData) {
                         text: 'IMDb Rating'
                     },
                     min: 0,
-                    max: 10  // Ratings scale from 0 to 10
+                    max: 10 
                 }
             }
         }

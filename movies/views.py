@@ -10,6 +10,10 @@ def movie_list(request):
     # Serialize the movie data to pass it to the template
     movie_data = list(movies.values('released_year', 'imdb_rating'))
 
+    # Convert 'imdb_rating' to float to make it JSON serializable
+    for movie in movie_data:
+        movie['imdb_rating'] = float(movie['imdb_rating'])
+
     # Return the template with the context
     return render(request, 'movies/movie_list.html', {
         'movies': movies,
